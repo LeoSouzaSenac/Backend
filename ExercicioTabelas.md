@@ -57,9 +57,6 @@ Por exemplo, todas as células em `Categoria_ID` devem ser preenchidas com azul.
 - Preencha as tabelas com dados fictícios.
 - Insira alguns dados de exemplo em cada tabela, garantindo que as chaves estrangeiras correspondam corretamente aos valores nas chaves primárias.
 
-## Dica
-Utilize as funções de validação de dados do Excel para garantir que as chaves estrangeiras aceitem apenas valores existentes nas chaves 
-primárias das tabelas correspondentes.
 
 
 
