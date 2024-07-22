@@ -6,7 +6,7 @@ Criar e manipular um banco de dados de uma livraria, incluindo tabelas para auto
 ## 📝 Passos
 
 ### 1. 🏗️ Criação do Banco de Dados
-- Crie um banco de dados chamado `Livraria`.
+- Crie um banco de dados chamado `Livraria + nome`.
 
 <details>
 <summary>💡 Dica: Como criar o banco de dados</summary>
