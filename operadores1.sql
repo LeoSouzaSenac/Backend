@@ -60,10 +60,41 @@ Este exemplo retorna empregados cujos nomes começam com a letra 'A'.
 
 
 
+SELECT nome
+FROM empregados
+WHERE nome LIKE '%a';
+
+Este exemplo retorna todos os nomes que terminam com a letra 'a'.
 
 
 
+SELECT nome
+FROM empregados
+WHERE nome LIKE '%an%';
 
+Este exemplo retorna todos os nomes que contêm a substring 'an'.
+
+
+SELECT nome
+FROM empregados
+WHERE nome LIKE 'A___';
+
+Este exemplo retorna todos os nomes que começam com 'A' e têm exatamente quatro caracteres.
+
+
+SELECT nome
+FROM empregados
+WHERE nome LIKE '_a%';
+
+Este exemplo retorna todos os nomes onde a segunda letra é 'a'.
+
+
+
+SELECT nome
+FROM empregados
+WHERE nome LIKE '%a_r%';
+
+Este exemplo retorna todos os nomes que contêm 'a' seguido por qualquer caractere e depois 'r'.
 
 
 
