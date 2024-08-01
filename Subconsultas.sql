@@ -121,17 +121,6 @@ O operador ANY compara o salário de cada empregado com qualquer um dos salário
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 Exemplo com ALL
 O operador ALL retorna verdadeiro se todos os valores na subconsulta satisfizerem a condição. Vamos supor que queremos encontrar empregados cujo salário é maior do que todos os salários no departamento de TI.
 
@@ -201,3 +190,60 @@ WHERE (departamento_id, titulo) IN (SELECT departamento_id, titulo FROM cargos W
 
 
 Esta subconsulta retorna combinações de departamento_id e titulo de cargos com salário acima de 5000, e a consulta externa seleciona os nomes dos empregados que correspondem a essas combinações.
+
+
+
+
+
+
+Cláusula HAVING
+A cláusula HAVING é usada para filtrar os resultados de uma consulta de agrupamento (GROUP BY) com base em uma condição especificada. É similar à cláusula WHERE, mas a diferença principal é que HAVING opera após os dados serem agrupados, enquanto WHERE filtra as linhas antes do agrupamento.
+
+SELECT coluna1, função_agregada(coluna2)
+FROM tabela
+GROUP BY coluna1
+HAVING condição;
+
+
+SELECT departamentos.nome, AVG(cargos.salario)
+FROM empregados
+JOIN cargos ON empregados.departamento_id = cargos.departamento_id
+JOIN departamentos ON empregados.departamento_id = departamentos.departamento_id
+GROUP BY departamentos.nome
+HAVING AVG(cargos.salario) > 5000.00;
+
+Explicação da Consulta
+Selecionar Colunas:
+
+departamentos.nome: O nome do departamento.
+AVG(cargos.salario): A média salarial dos cargos nesse departamento.
+
+
+Junções:
+JOIN departamentos ON empregados.departamento_id = departamentos.id: Junção entre empregados e departamentos para obter o nome do departamento.
+
+Agrupamento:
+GROUP BY departamentos.nome: Agrupa os resultados pelo nome do departamento.
+Condição de Agrupamento:
+
+HAVING AVG(cargos.salario) > 5000.00: Filtra os grupos para incluir apenas aqueles onde a média salarial é superior a R$ 5000,00.
+
+Resultado Esperado
+A consulta retornará os nomes dos departamentos onde a média salarial dos cargos é maior que R$ 5000,00. Este exemplo é mais simples e direto, usando as tabelas que você já tem.
+
+
+1) Escreva uma consulta SQL para selecionar o departamento_id e a soma dos salários para cada departamento. Filtre os departamentos onde a soma total dos salários é maior que R$ 12.000,00.
+
+2) Escreva uma consulta SQL para selecionar o titulo e o número de empregados para cada título. Filtre os títulos onde há mais de 2 empregados.
+
+3) Escreva uma consulta SQL para selecionar o departamento_id e a média dos salários para cada departamento. Filtre os departamentos onde a média salarial é maior que R$ 4.500,00.
+
+4) Escreva uma consulta SQL para selecionar o departamento_id e o maior salário para cada departamento. Filtre os departamentos onde o maior salário é superior a R$ 6.000,00.
+
+5) Escreva uma consulta SQL para selecionar o departamento_id e o menor salário para cada departamento. Filtre os departamentos onde o menor salário é superior a R$ 2.500,00.
+
+
+
+
+
+
