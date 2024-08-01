@@ -49,3 +49,7 @@ CALL AumentarSalario(1, 10);
 
 Para ver o procedimento:
 SHOW CREATE PROCEDURE AumentarSalario;
+
+
+Para deletar o procedimento:
+DROP PROCEDURE IF EXISTS AumentarSalario;
