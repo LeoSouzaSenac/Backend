@@ -109,6 +109,6 @@ Quando a comida está pronta, o garçom (API) a entrega a você. A resposta da c
 
   Exemplo: `{ "dish": "New Dish", "status": "added" }`
 
-## Conclusão
+## Resumo
 
 No restaurante, a API (garçom) e o protocolo HTTP (conjunto de regras) trabalham juntos para garantir que seu pedido chegue corretamente à cozinha e que você receba o que pediu. Da mesma forma, na web, uma API usa o protocolo HTTP para permitir que aplicativos e servidores se comuniquem, enviando e recebendo dados de maneira estruturada e eficiente. Entender como essa comunicação funciona ajuda a construir e utilizar sistemas web de forma mais eficaz.
