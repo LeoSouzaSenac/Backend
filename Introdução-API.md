@@ -1,6 +1,6 @@
 # Entendendo APIs
 
-# O que são APIs para se Comunicar com um Servidor?
+# O que são APIs e porque usamos elas para se comunicar com um servidor?
 
 APIs, ou **Application Programming Interfaces** (Interfaces de Programação de Aplicações), são como intermediários que permitem que um aplicativo se comunique com um servidor. Elas definem um conjunto de regras e formatos que permitem a troca de informações entre o cliente (seu aplicativo) e o servidor (onde os dados e serviços estão armazenados).
 
