@@ -2,7 +2,22 @@
 
 ## Introdução
 
-Express é um framework web minimalista e flexível para Node.js. Ele facilita a criação de servidores web e APIs, oferecendo uma estrutura leve que pode ser expandida conforme necessário.
+Express é um framework web minimalista e flexível para Node.js. Ele facilita a criação de servidores web. Quando falamos que o Express "cria um servidor web," estamos nos referindo ao fato de que ele fornece uma maneira fácil e rápida de configurar e gerenciar um servidor que pode responder a requisições HTTP.
+
+
+## Como o Express Cria um Servidor Web
+Criação do Servidor:
+O Express permite criar um servidor web com apenas algumas linhas de código. Ele usa o módulo HTTP do Node.js para fazer isso, mas oferece uma API mais amigável e poderosa.
+
+### Configuração de Rotas:
+Com o Express, você define rotas que determinam como o servidor deve responder a diferentes URLs e métodos HTTP (GET, POST, etc.). Essas rotas são configuradas para responder a requisições com dados específicos ou executar funções de backend.
+
+### Uso de Middlewares:
+Middlewares são funções que podem processar requisições e respostas. Eles podem ser usados para tarefas como autenticação, validação de dados, e logging. O Express facilita a integração de middlewares para adicionar funcionalidades adicionais ao servidor.
+
+### Início do Servidor:
+O Express simplifica o processo de iniciar o servidor e escutar requisições em uma porta específica. Isso permite que o servidor fique disponível para receber e responder a requisições dos clientes.
+
 
 ## Principais Características
 
