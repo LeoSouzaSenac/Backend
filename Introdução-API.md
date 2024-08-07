@@ -112,3 +112,57 @@ Quando a comida está pronta, o garçom (API) a entrega a você. A resposta da c
 ## Resumo
 
 No restaurante, a API (garçom) e o protocolo HTTP (conjunto de regras) trabalham juntos para garantir que seu pedido chegue corretamente à cozinha e que você receba o que pediu. Da mesma forma, na web, uma API usa o protocolo HTTP para permitir que aplicativos e servidores se comuniquem, enviando e recebendo dados de maneira estruturada e eficiente. Entender como essa comunicação funciona ajuda a construir e utilizar sistemas web de forma mais eficaz.
+
+
+
+## Por Que Usamos Métodos HTTP e Comandos SQL Juntos?
+
+Os métodos HTTP e comandos SQL servem a propósitos diferentes mas complementares:
+
+- **Métodos HTTP**: São usados para definir a intenção da requisição que estamos fazendo ao servidor web. Por exemplo, queremos registrar um usuário? Saber quais usuários existem? Usamos os métodos HTTP.
+- Eles seguem o protocolo HTTP e ajudam a organizar e padronizar a forma como os clientes (como navegadores ou aplicativos) comunicam-se com o servidor.
+  
+- **Comandos SQL**: São usados dentro do servidor para realizar operações específicas no banco de dados. Eles manipulam diretamente os dados armazenados. São eles que vão realizar a ação que queremos.
+
+### Como Eles Funcionam Juntos?
+
+Quando um cliente (por exemplo, um navegador web) faz uma requisição a um servidor, ele usa um método HTTP para indicar o tipo de ação que deseja realizar. O servidor então processa essa requisição e, dependendo da ação solicitada, executa os comandos SQL apropriados para interagir com o banco de dados.
+
+### Exemplos:
+
+1. **Adicionar um Usuário (POST)**
+    - **Método HTTP**: `POST /usuarios`
+    - **Ação**: Criar um novo usuário.
+    - **Comando SQL**: `INSERT INTO usuarios (nome, email, senha) VALUES (?, ?, ?)`
+    - **Processo**:
+        - O cliente envia uma requisição `POST` com os dados do usuário.
+        - O servidor recebe a requisição, extrai os dados e executa um comando `INSERT` para adicionar o novo usuário ao banco de dados.
+
+2. **Obter Todos os Usuários (GET)**
+    - **Método HTTP**: `GET /usuarios`
+    - **Ação**: Ler todos os usuários.
+    - **Comando SQL**: `SELECT * FROM usuarios`
+    - **Processo**:
+        - O cliente envia uma requisição `GET` para obter a lista de usuários.
+        - O servidor recebe a requisição e executa um comando `SELECT` para recuperar todos os usuários do banco de dados e enviar de volta ao cliente.
+
+3. **Atualizar um Usuário (PUT)**
+    - **Método HTTP**: `PUT /usuarios/:id`
+    - **Ação**: Atualizar um usuário existente.
+    - **Comando SQL**: `UPDATE usuarios SET nome = ?, email = ?, senha = ? WHERE id = ?`
+    - **Processo**:
+        - O cliente envia uma requisição `PUT` com os novos dados do usuário.
+        - O servidor recebe a requisição, extrai os novos dados e o `id`, e executa um comando `UPDATE` para atualizar o usuário no banco de dados.
+
+4. **Deletar um Usuário (DELETE)**
+    - **Método HTTP**: `DELETE /usuarios/:id`
+    - **Ação**: Deletar um usuário existente.
+    - **Comando SQL**: `DELETE FROM usuarios WHERE id = ?`
+    - **Processo**:
+        - O cliente envia uma requisição `DELETE` com o `id` do usuário a ser deletado.
+        - O servidor recebe a requisição, extrai o `id`, e executa um comando `DELETE` para remover o usuário do banco de dados.
+
+### Conclusão
+
+Usamos métodos HTTP para definir a intenção da comunicação entre o cliente e o servidor, e comandos SQL para realizar as operações necessárias no banco de dados. Isso nos permite criar aplicativos web que podem interagir de forma eficiente e organizada com um banco de dados, fornecendo aos usuários uma interface para gerenciar dados.
+
