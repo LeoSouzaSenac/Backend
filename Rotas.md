@@ -6,7 +6,7 @@ No contexto de desenvolvimento web com Express (um framework para Node.js), rota
 
 ### Caminho (Path)
 
-O caminho é a parte da URL que vem após o domínio. Por exemplo, em `https://meusite.com/usuarios`, o caminho é `/usuarios`.
+O caminho é a parte da URL que vem após o domínio. Por exemplo, em `https://meusite.com/usuarios`, o caminho é `/usuarios`. O 'nome' do caminho é escolhido por você.
 
 ### Métodos HTTP
 
@@ -33,8 +33,6 @@ app.metodoHTTP(caminho, funçãoCallback);
 - `funçãoCallback`: A função que será executada quando a rota for acessada.
 
 ## Exemplos Práticos
-
-Vamos ver exemplos práticos extraídos do seu arquivo.
 
 ### Adicionar um Usuário (POST)
 
