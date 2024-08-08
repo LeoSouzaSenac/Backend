@@ -55,11 +55,8 @@ O código realiza as seguintes etapas:
 ### Código JavaScript
 
 ```javascript
-const readlineSync = require('readline-sync');
+   Math.floor(Math.random() * [alguma coisa];
+```
 
-// Função para gerar um número aleatório entre min e max (inclusive)
-function getRandomNumber(min, max) {
-    return Math.floor(Math.random() * [alguma coisa];
-}
 
 
