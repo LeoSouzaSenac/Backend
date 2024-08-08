@@ -20,7 +20,7 @@ Neste jogo, um número secreto entre 1 e 100 é gerado aleatoriamente. Seu objet
    ```
 
 3. **Execute o Jogo**:
-   No terminal, navegue até o diretório onde o arquivo `simple_game.js` está localizado e execute:
+   No terminal, navegue até o diretório onde o arquivo `game.js` está localizado e execute:
    ```bash
    node game.js
    ```
