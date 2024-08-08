@@ -2,7 +2,7 @@
 
 ## Descrição
 
-Neste jogo, um número secreto entre 1 e 10 é gerado aleatoriamente. Seu objetivo é adivinhar qual é o número secreto. O jogo continuará pedindo para você tentar até que você adivinhe o número correto.
+Neste jogo, um número secreto entre 1 e 100 é gerado aleatoriamente. Seu objetivo é adivinhar qual é o número secreto. O jogo continuará pedindo para você tentar até que você adivinhe o número correto.
 
 ## Requisitos
 
