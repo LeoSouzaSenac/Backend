@@ -34,7 +34,7 @@ const jwt = require('jsonwebtoken');
 const bodyParser = require('body-parser');
 
 const app = express();
-const SECRET_KEY = 'your_secret_key';
+const SECRET_KEY = 'crie_algum_codigo_aqui';
 
 app.use(bodyParser.json());
 
@@ -154,7 +154,3 @@ app.listen(3000, () => {
      "message": "Hello, user with ID: 1"
    }
    ```
-
-## Conclusão
-
-Este guia mostrou como implementar autenticação usando JWT em uma aplicação Node.js com Express. Você aprendeu a gerar tokens JWT após o login, proteger rotas usando middleware, e acessar o ID do usuário autenticado. Este é um ponto de partida para implementar autenticação em aplicações maiores e mais complexas.
